@@ -228,3 +228,14 @@ body {
 # paso 29
 
 Tiene buena pinta. Es hora de comenzar a agregar algunos elementos del menú. Agregue un elemento de artículo vacío debajo del encabezado Café. Contendrá un sabor y precio de cada café que ofreces actualmente.
+
+# paso 30
+
+Paso 30
+Los elementos del artículo suelen contener varios elementos que tienen información relacionada. En este caso contendrá un sabor a café y un precio por ese sabor. Anida dos elementos p dentro del elemento de tu artículo. El texto del primero debe ser French Vanilla y el del segundo 3.00.
+
+```css
+<article>
+            <p>French Vanilla</p><p>3.00</p>
+          </article>
+```
