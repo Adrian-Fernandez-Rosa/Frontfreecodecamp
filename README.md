@@ -239,3 +239,114 @@ Los elementos del artículo suelen contener varios elementos que tienen informac
             <p>French Vanilla</p><p>3.00</p>
           </article>
 ```
+# Paso 31
+
+Comenzando debajo del par café/precio existente, agregue el siguiente café y precios usando elementos de artículo con dos elementos p anidados dentro de cada uno. Como antes, el texto del primer elemento p debe contener el sabor del café y el texto del segundo elemento p debe contener el precio.
+
+```css
+           <article>
+            <p>French Vanilla</p><p>3.00</p>
+</article>
+           <article>  <p>Caramel Macchiato</p> <p>3.75</p> </article>
+  <article>  <p>Pumpkin Spice</p> <p>3.50</p>   <article>
+    <article> <p>Hazelnut</p> <p>4.00</p>   </article>
+      <article> <p>Mocha </p><p>4.50</p>   </article>
+```
+
+# Paso 32
+Los sabores y precios actualmente están apilados uno encima del otro y centrados con sus respectivos elementos p. Sería bueno si el sabor estuviera a la izquierda y el precio a la derecha.
+
+Add the class name flavor to the French Vanilla p element.
+
+```css 
+ <p class="flavor">French Vanilla</p>
+            <p>3.00</p>
+```
+
+# Paso 33
+Usando su nueva clase flavor de tipo como selector, establezca el valor de la propiedad de alineación de texto a la izquierda.
+
+```css
+.flavor {
+  text-align: left;
+}
+```
+
+# Paso 34
+A continuación, desea alinear el precio a la derecha. Agregue una clase llamada precio a su elemento p que tenga 3.00 como texto.
+
+```css
+ <p class="price">3.00</p>
+```
+
+# Paso 35
+Ahora alinee el texto a la derecha para los elementos con la clase de precio.
+
+```css
+.price {
+  text-align: right;
+}
+```
+
+# Paso 36
+Eso es más o menos lo que quieres, pero ahora sería bueno si el sabor y el precio estuvieran en la misma línea. Los elementos p son elementos a nivel de bloque, por lo que ocupan todo el ancho de su elemento principal.
+
+Para colocarlos en la misma línea, debes aplicar algo de estilo a los elementos p para que se comporten más como elementos en línea. Para hacerlo, comience agregando un atributo de clase con el elemento de valor al primer elemento del artículo bajo el encabezado Café.
+
+To do that, start by adding a class attribute with the value item to the first article element under the Coffee heading.
+
+```html
+ <h2>Coffee</h2>
+          <article class="item">
+            <p class="flavor">French Vanilla</p>
+            <p class="price">3.00</p>
+          </article>
+```
+
+
+# Paso 37
+Los elementos p están anidados en un elemento de artículo con el atributo de clase de artículo. Puede diseñar todos los elementos p anidados en cualquier lugar de elementos con una clase denominada elemento de esta manera:
+
+.item p { }
+Usando el selector anterior, agregue una propiedad de visualización con valor inline-block para que los elementos p se comporten más como elementos en línea
+
+```css 
+.item p {
+  display: inline-block;
+}
+
+```
+
+# Paso 38
+Eso está más cerca, pero el precio no se quedó a la derecha. Esto se debe a que los elementos de bloque en línea solo ocupan el ancho de su contenido. Para distribuirlos, agregue una propiedad de ancho a los selectores de clase de sabor y precio que tienen un valor del 50% cada uno.
+
+```css 
+.flavor {
+  text-align: left;
+   width: 50%;
+}
+
+.price {
+  text-align: right;
+    width: 50%;
+}
+```
+
+
+# Paso 39
+
+Bueno, eso no funcionó. Diseñar los elementos p como bloques en línea y colocarlos en líneas separadas en el código crea un espacio adicional a la derecha del primer elemento p, lo que hace que el segundo se desplace a la siguiente línea. Una forma de solucionar este problema es hacer que el ancho de cada elemento p sea un poco menos del 50%.
+
+Cambie el valor del ancho al 49% para cada clase para ver qué sucede.
+
+```css 
+.flavor {
+  text-align: left;
+  width: 49%;
+}
+
+.price {
+  text-align: right;
+  width: 49%;
+}
+```
