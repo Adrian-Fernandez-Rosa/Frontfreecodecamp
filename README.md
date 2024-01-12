@@ -591,3 +591,32 @@ Dado que los 4 lados del menú tienen el mismo espacio interno, continúe y elim
 padding: 20px;
 
 ```
+
+# Paso 56
+El ancho actual del menú siempre ocupará el 80% del ancho del elemento del cuerpo. En una pantalla muy amplia, el café y el postre aparecen muy alejados de sus precios.
+
+Agregue una propiedad de ancho máximo a la clase de menú con un valor de 500 px para evitar que crezca demasiado.
+
+```css
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+```
+
+# Paso 57
+Puede cambiar la familia de fuentes del texto para que se vea diferente de la fuente predeterminada de su navegador. Cada navegador tiene algunas fuentes comunes disponibles.
+
+Cambie todo el texto de su cuerpo agregando una propiedad font-family con el valor sans-serif. Esta es una fuente bastante común y muy legible.
+
+```css
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+
+  font-family: sans-serif;
+}
+```
