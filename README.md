@@ -350,3 +350,150 @@ Cambie el valor del ancho al 49% para cada clase para ver qué sucede.
   width: 49%;
 }
 ```
+
+# Paso 40
+Eso funcionó, pero todavía hay un pequeño espacio a la derecha del precio.
+
+Podrías seguir probando varios porcentajes para los anchos. En su lugar, use la tecla de retroceso en su teclado para mover el elemento p con el precio de clase al lado del elemento p con el tipo de clase para que estén en la misma línea en el editor. Asegúrate de que no haya espacio entre ellos.
+
+```css 
+<p class="flavor">French Vanilla</p><p class="price">3.00</p>
+```
+
+# Paso 41
+Ahora continúe y cambie el ancho de la clase de sabor y de precio para que vuelva a ser del 50 %.
+
+
+# Paso 42
+
+Ahora que sabes que funciona, puedes cambiar el artículo restante y los elementos p para que coincidan con el primer conjunto. Comience agregando el elemento de clase a los otros elementos del artículo.
+
+code index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Menu</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="menu">
+      <main>
+        <h1>CAMPER CAFE</h1>
+        <p>Est. 2020</p>
+        <section>
+          <h2>Coffee</h2>
+          <article class="item">
+            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Caramel Macchiato</p>
+            <p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Pumpkin Spice</p>
+            <p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Hazelnut</p>
+            <p class="price">4.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Mocha</p>
+            <p class="price">4.50</p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+```
+
+style.css
+
+```css
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item p {
+  display: inline-block;
+}
+
+.flavor {
+  text-align: left;
+  width: 50%;
+}
+
+.price {
+  text-align: right;
+  width: 50%;
+}
+```
+
+# Paso 43
+A continuación, coloque los otros p elementos para que estén en la misma línea sin espacios entre ellos.
+​
+
+```html
+
+  <article class="item">
+            <p>Caramel Macchiato</p><p>3.75</p>
+          </article>
+          <article class="item">
+            <p>Pumpkin Spice</p><p>3.50</p>
+          </article>
+          <article class="item">
+            <p>Hazelnut</p><p>4.00</p>
+          </article>
+          <article class="item">
+            <p>Mocha</p><p>4.50</p>
+          </article>
+```
+
+# Paso 44
+Para completar el estilo, agregue el sabor y el precio de los nombres de clase aplicables a todos los elementos p restantes.
+
+# Paso 45
+Si reduce el ancho de la vista previa de la página, notará que en algún momento parte del texto de la izquierda comienza a pasar a la siguiente línea. Esto se debe a que el ancho de los elementos p en el lado izquierdo solo puede ocupar el 50% del espacio.
+
+Como sabe que los precios de la derecha tienen muchos menos caracteres, cambie el valor del ancho de la clase de sabor para que sea 75 % y el valor del ancho de la clase de precio para que sea 25 %.
+
+```css
+.flavor {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+```
+
+# Paso 46
+Volverá a diseñar el menú en unos pocos pasos, pero por ahora, continúe y agregue un segundo elemento de sección debajo del primero para mostrar los postres que ofrece la cafetería.
+
+# Step 47
+Add an h2 element in the new section and give it the text Desserts.
+
+```css
+<section>
+          <h2>Desserts</h2>
+</section>
+```
