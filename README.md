@@ -497,3 +497,97 @@ Add an h2 element in the new section and give it the text Desserts.
           <h2>Desserts</h2>
 </section>
 ```
+
+# paso 48
+Agregue un elemento de artículo vacío debajo del encabezado Postres. Dale un atributo de clase con el elemento de valor.
+
+```html
+<h2>Desserts</h2>
+          <article class="item"> </article>
+```
+
+
+# paso 49
+Nest two p elements inside your article element. The first one's text should be Donut, and the second's text 1.50. Put both of them on the same line making sure there is no space between them.
+
+```html
+   <article class="item">
+            <p>Donut</p><p>1.50</p>
+          </article>
+```
+
+# Paso 50
+Para los dos elementos p que acaba de agregar, agregue postre como el valor del atributo de clase del primer elemento p y el valor del precio como atributo de clase del segundo elemento p.
+
+```html
+<p class="dessert">Donut</p><p class="price">1.50</p>
+```
+
+# Paso 51
+Algo no parece correcto. Agregó el valor de atributo de clase correcto al elemento p con Donut como texto, pero no definió un selector para él.
+
+La regla CSS para la clase de tipo ya establece las propiedades que desea. Agregue la clase dessert como selector adicional para esta regla CSS.
+
+```css
+.flavor , .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+```
+
+
+Paso 52
+Debajo del postre que acaba de agregar, agregue el resto de los postres y los precios usando tres elementos de artículo más, cada uno con dos elementos p anidados. Cada elemento debe tener el texto correcto de postre y precio, y todos deben tener las clases correctas.
+
+Cherry Pie 2.75
+Cheesecake 3.00
+Cinnamon Roll 2.50
+
+```html
+        <article class="item">
+            <p class="dessert">Donut</p><p class="price">1.50</p>
+             </article>
+              <article class="item">
+            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+             </article>
+              <article class="item">
+            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+             </article>
+              <article class="item">
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+             </article>
+```
+
+# Paso 53
+Puedes darle a tu menú algo de espacio entre el contenido y los lados con varias propiedades de padding.
+
+Give the menu class a padding-left and a padding-right with the same value 20px.
+
+```css
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+```
+
+# Step 54
+That looks better. Now try to add the same 20px padding to the top and bottom of the menu.
+```css
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+```
+
+# Paso 55
+Dado que los 4 lados del menú tienen el mismo espacio interno, continúe y elimine las cuatro propiedades y use una única propiedad de padding con el valor 20px.
+
+```css 
+
+padding: 20px;
+
+```
